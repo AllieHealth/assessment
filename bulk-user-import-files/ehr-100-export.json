@@ -15,7 +15,7 @@
             "name": "Jordan Amy Smith",
             "date_of_birth": "1994-08-22",
             "contact_info": {
-                "email": "jordan.s@example.net",
+                "email_address": "jordan.s@example.net",
                 "phone": "(555) 987-6543"
             }
         },
@@ -24,7 +24,7 @@
             "name": "Carlos Rodriguez",
             "date_of_birth": "1986-02-10",
             "contact_info": {
-                "email": "carlos.r@example.org",
+                "email_address": "carlos.r@example.org",
                 "phone": "(555) 321-7890"
             }
         },
@@ -33,7 +33,7 @@
             "name": "Emily Davis",
             "date_of_birth": "2001-11-31",
             "contact_info": {
-                "email": "emily.d@example.com",
+                "email_address": "emily.d@example.com",
                 "phone": "(555) 789-0123"
             }
         },
@@ -42,7 +42,7 @@
             "name": "Michael Brown",
             "date_of_birth": "1990-06-07",
             "contact_info": {
-                "email": "michael.b@example.net",
+                "email_address": "michael.b@example.net",
                 "phone": "(555) 234-5678"
             }
         },
@@ -51,7 +51,7 @@
             "name": "Sarah Miller",
             "date_of_birth": "1990-09-28",
             "contact_info": {
-                "email": "sarah.m@example.org",
+                "email_address": "sarah.m@example.org",
                 "phone": "(555) 876-5432"
             }
         }
