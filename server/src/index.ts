@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use((req: Request, res: Response, next: NextFunction) =>
-  router(req, res, next),
+  router(req, res, next)
 );
 
 const port = process.env.PORT;

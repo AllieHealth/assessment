@@ -22,7 +22,7 @@ const UploadInput = () => {
         "Content-Type": "multipart/form-data",
       },
     },
-    { manual: true },
+    { manual: true }
   );
 
   const onSelect = (event: any) => {
