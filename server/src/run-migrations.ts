@@ -16,7 +16,7 @@ export const runMigrations = (db: Database) => {
   for (const migrationFileName of sortedMigrationNames) {
     const migration = fs.readFileSync(
       `${migrationsDir}/${migrationFileName}.sql`,
-      "utf8",
+      "utf8"
     );
     db.exec(migration);
   }

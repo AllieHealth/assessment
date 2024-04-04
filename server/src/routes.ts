@@ -23,7 +23,7 @@ router.post("/users", (req: Request, res: Response) => {
 
   const user = db
     .prepare(
-      "INSERT INTO users (first_name, last_name, email) VALUES (@firstName, @lastName, @email)",
+      "INSERT INTO users (first_name, last_name, email) VALUES (@firstName, @lastName, @email)"
     )
     .run({
       firstName: req.body.firstName,
@@ -45,7 +45,7 @@ router.post(
     console.log(file);
 
     res.sendStatus(200);
-  },
+  }
 );
 
 export default router;
