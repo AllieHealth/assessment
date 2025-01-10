@@ -1,11 +1,7 @@
 import { Request, Response, Router } from "express";
 import { db } from "./db";
-import multer from "multer";
-import os from "os";
 
 const router = Router();
-
-const upload = multer({ dest: os.tmpdir() });
 
 router.get("/users", (req: Request, res: Response) => {
   const users = db.prepare("SELECT * FROM users").all();
@@ -23,7 +19,7 @@ router.post("/users", (req: Request, res: Response) => {
 
   const user = db
     .prepare(
-      "INSERT INTO users (first_name, last_name, email) VALUES (@firstName, @lastName, @email)"
+      "INSERT INTO users (first_name, last_name, email) VALUES (@firstName, @lastName, @email)",
     )
     .run({
       firstName: req.body.firstName,
@@ -35,17 +31,5 @@ router.post("/users", (req: Request, res: Response) => {
     id: user.lastInsertRowid,
   });
 });
-
-router.post(
-  "/users/bulk",
-  upload.single("file"),
-  (req: Request, res: Response) => {
-    const file = req.file;
-
-    console.log(file);
-
-    res.sendStatus(200);
-  }
-);
 
 export default router;

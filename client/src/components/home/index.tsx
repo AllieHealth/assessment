@@ -4,13 +4,12 @@ import { useState } from "react";
 import UsersTable from "./UsersTable";
 import MessageContainer from "./MessageContainer";
 import CreateUserModal from "../create";
-import UploadInput from "./UploadInput";
 
 const Home = () => {
   const [isCreateUserOpen, setIsCreateUserOpen] = useState(false);
 
   const [{ data, loading, error }, refetch] = useAxios(
-    `${process.env.REACT_APP_SERVER_BASE_URL}/users`
+    `${process.env.REACT_APP_SERVER_BASE_URL}/users`,
   );
 
   if (loading) {
@@ -42,7 +41,6 @@ const Home = () => {
           marginBottom: 3,
         }}
       >
-        <UploadInput />
         <Button variant="contained" onClick={() => setIsCreateUserOpen(true)}>
           Create User
         </Button>
